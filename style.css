@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Audiowide';
+  /* background: rgb(144,100,55); */
+}
+
+.title {
+  margin-top: 50px;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.image-frost {
+  background: url(439003.jpg) center center/cover no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  filter: blur(15px);
+  z-index: -2;
+}
+
+.pic-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.test {
+  width: 50vw;
+  height: 40vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.inner-champloo {
+  border: 15px outset white;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: url("439003.jpg") center center/cover;
+  transform: translate(-50%,-50%);
+  box-shadow: rgba(238, 175, 57, 0.541) 2px 2px 15px 1px;
+}
+
+.test .audio {
+  height: 36px;
+  width: 36px;
+  position: absolute;
+  bottom: 5%;
+}
+
+.test .audio:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+
+.test .play {
+  left: 75%;
+}
+
+.test .pause {
+  left: 85%;
+}
+
+.episodes-link {
+  background: salmon;
+  padding: 15px;
+  position: relative;
+}
+
+.episodes-link:hover {
+  transform: scale(1.1);
+}
+
+.episodes-link > a {
+  text-decoration: none;
+  color: maroon;
+}
+
+.bar {
+  animation: all 1s ease infinite;
+}
+
+.box-container {
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.bar-top {
+  position: absolute;
+  background: maroon;
+  width: 25%;
+  height: 5px;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  animation: vertslide 2s ease infinite;
+}
+
+.bar-left {
+  position: absolute;
+  background: maroon;
+  width: 5px;
+  height: 25%;
+  top: -5px;
+  left: 0;
+  z-index: 300;
+  animation: sideslide 2s ease infinite;
+}
+
+.bar-bottom {
+  position: absolute;
+  background: maroon;
+  width: 25%;
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  z-index: 300;
+  animation: vertslide 2s ease infinite;
+  animation-delay: 0.7s;
+}
+
+.bar-right {
+  position: absolute;
+  background: maroon;
+  width: 5px;
+  height: 25%;
+  top: -5px;
+  right: 0;
+  z-index: 300;
+  animation: sideslide 2s ease infinite;
+  animation-delay: 0.7s;
+}
+
+@keyframes sideslide {
+  0% {
+    top: -5px;
+  }
+  100% {
+    top: 50px;
+  }
+}
+
+@keyframes vertslide {
+  0% {
+    left: -5px;
+  }
+  100% {
+    left: 200px;
+  }
+}
+
